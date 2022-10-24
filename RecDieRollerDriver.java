@@ -7,6 +7,6 @@
 public class RecDieRollerDriver {
 
 	public static void main(String []args) {
-		RecDieRoller.diceRoll(2, 100,  0, 0);
+		RecDieRoller.diceRoll(2, 600, 600);
 	}
 }//end of class
