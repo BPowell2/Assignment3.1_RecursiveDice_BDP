@@ -10,10 +10,15 @@ import java.util.Random;
 	public class RecDieRoller {
 		
 		
+		
+		static double meanFinder =0;
+		static int timesRolled = 0;
+		
+		
 		/*this method allows you to put in any number on a die and set it as a target to be rolled as many times as you set totalrolls 2
 		 * @params Target , Totalrolls , meanfinder , timesRolled
 		 */
-		public static void diceRoll(int Target , int Totalrolls, double meanFinder, int timesRolled ) {
+		public static void diceRoll(int Target , int Totalrolls, int TotalRollsMean) {
 			
 			
 			
@@ -32,7 +37,7 @@ import java.util.Random;
 					meanFinder = meanFinder + timesRolled;
 					timesRolled = 0;
 					
-					diceRoll(Target, Totalrolls -1, meanFinder, timesRolled);
+					diceRoll(Target, Totalrolls -1, TotalRollsMean);
 					
 				
 				
@@ -41,7 +46,7 @@ import java.util.Random;
 				if(Selected != Target && Totalrolls != 0) {
 					
 					timesRolled++;
-					diceRoll(Target, Totalrolls, meanFinder, timesRolled);
+					diceRoll(Target, Totalrolls, TotalRollsMean);
 					
 					
 					
@@ -49,7 +54,7 @@ import java.util.Random;
 				
 				if(Totalrolls==0) {
 					
-					System.out.println("the mean amount it took to get the target was "+meanFinder/100);
+					System.out.println("the mean amount it took to get the target was "+meanFinder/TotalRollsMean);
 					
 				}//end of if 
 				
