@@ -1,4 +1,9 @@
-
+/* this is the recursive die roller class with input for how many roles and also returns mean of rolls it took 
+ * 10/18/22
+ * @author Benjamin Powell
+ * @version 1.0
+ * @since 2022-18-10
+ */
 import java.util.Random;
  
 public class RecDieRollerDriver {
